@@ -48,4 +48,4 @@ This is an advanced number guessing game implemented in Java. The computer gener
 
 ## Author
 
-[Your Name] - [Your GitHub Profile URL (Optional)]
+[TrivCodez]
