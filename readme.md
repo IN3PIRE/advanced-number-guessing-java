@@ -1,51 +1,47 @@
-# Advanced Number Guessing Game
+# Enhanced Number Guessing Game
 
-## Description
-
-This is an advanced number guessing game implemented in Java. The computer generates a random secret number between 1 and 100, and the user has a limited number of attempts to guess the number. The game provides feedback on whether the guess is too high or too low, and it handles invalid input gracefully.
+This is a Java-based number guessing game with improved input handling and user experience.
 
 ## Features
 
-*   **Random Number Generation:** The game generates a new random secret number each time it is run.
-*   **Limited Attempts:** The user has a limited number of attempts (7 in this version) to guess the number.
-*   **Input Validation:** The game handles invalid input, such as non-numeric input or numbers outside the valid range (1-100), providing informative error messages.
-*   **Feedback:**  Provides feedback to the user after each guess (too high, too low, or correct).
-*   **Clear Output:** Displays a clear message upon winning or losing, indicating the secret number and the number of attempts used.
+*   **Number Range:** The game chooses a secret number between 1 and 100 (inclusive).
+*   **Limited Attempts:** Players have a maximum of 7 attempts to guess the number.
+*   **Input Validation:** The game validates user input to ensure it is a valid integer within the specified range.
+*   **Clear Feedback:** The game provides clear feedback to the player, indicating whether their guess is too high or too low, and displaying the number of attempts remaining.
+*   **Robust Error Handling:** The game handles invalid input gracefully, preventing crashes and providing helpful error messages.
 
-## How to Run
+## How to Play
 
-1.  **Prerequisites:** Make sure you have Java Development Kit (JDK) installed on your system.
+1.  **Compile the Code:**
 
-2.  **Compilation:**
-    *   Open a terminal or command prompt.
-    *   Navigate to the directory containing the `NumberGuessingGame.java` file.
-    *   Compile the code using the following command:
+    ```bash
+    javac NumberGuessingGame.java
+    ```
 
-        ```bash
-        javac NumberGuessingGame.java
-        ```
+2.  **Run the Game:**
 
-3.  **Execution:**
-    *   After successful compilation, run the game using the following command:
+    ```bash
+    java NumberGuessingGame
+    ```
 
-        ```bash
-        java NumberGuessingGame
-        ```
+3.  **Follow the Prompts:** The game will prompt you to enter your guess. Enter an integer between 1 and 100.
+4.  **Receive Feedback:** The game will tell you if your guess is too high or too low.
+5.  **Win or Lose:** If you guess the number within 7 attempts, you win! Otherwise, the game will reveal the secret number.
 
-4.  **Playing the Game:**
-    *   The game will prompt you to enter your guesses.
-    *   Enter a number between 1 and 100 and press Enter.
-    *   Follow the feedback provided by the game to adjust your guesses.
-    *   You have 7 attempts to guess the correct number.
+## Enhancements
 
-## Potential Enhancements
+This version of the number guessing game includes the following enhancements over a basic implementation:
 
-*   **Difficulty Levels:** Implement difficulty levels that change the range of numbers or the number of attempts allowed.
-*   **Score Tracking:** Track the user's scores (number of attempts taken) and allow them to save their scores.
-*   **GUI Interface:** Create a graphical user interface (GUI) for a more visually appealing and user-friendly experience. (Swing or JavaFX)
-*   **Hints:** Provide hints to the user, such as whether the number is even or odd, or a range the number falls within.
-*   **Two-Player Mode:** Allow two players to take turns guessing the number.
+*   **Constants for Clarity:** The maximum number and maximum attempts are defined as constants, making the code more readable and easier to modify.
+*   **Improved Input Handling:** Uses `InputMismatchException` for more specific exception handling when the user enters non-integer input.
+*   **Newline Consumption:**  The code explicitly consumes the newline character after reading integer input, preventing issues with subsequent reads.
+*   **Informative Output:** The welcome message now includes the number range, and the attempt prompt shows the current attempt number and the maximum number of attempts.
+*   **Robust Error Handling:** The game handles invalid input gracefully, preventing crashes and providing helpful error messages.
 
-## Author
+## Code Structure
 
-[TrivCodez]
+*   `NumberGuessingGame.java`: Contains the main game logic.
+
+## Contributing
+
+Contributions are welcome! Feel free to submit pull requests with bug fixes, new features, or improvements to the documentation.
